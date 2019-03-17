@@ -68,7 +68,7 @@ tray-padding = 2
 ;wm-restack = bspwm
 ;wm-restack = i3
 
-override-redirect = true
+override-redirect = false
 enable-ipc = true
 
 ;scroll-up = bspwm-desknext
@@ -391,6 +391,6 @@ ramp-foreground = ${colors.foreground-alt}
 
 [global/wm]
 margin-top = 0
-margin-bottom = 0
+margin-bottom = 5
 
 ; vim:ft=dosini
