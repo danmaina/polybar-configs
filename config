@@ -228,7 +228,7 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = " %Y-%m-%d"
+date = "  %a %Y-%m-%d"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M:%S
@@ -299,7 +299,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 
 ; This is useful in case the battery never reports 100% charge
-full-at = 99
+full-at = 100
 
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
@@ -340,7 +340,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;   <label-full> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
-;format-full = <ramp-capacity> <label-full>
+format-full = <ramp-capacity> <label-full>
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
