@@ -58,7 +58,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature powermenu popup-calendar
 
 tray-position = right
 tray-padding = 2
@@ -240,6 +240,12 @@ format-underline = #0a6cf5
 
 label = %date% %time%
 
+[module/popup-calendar]
+type = custom/script
+exec = ~/.config/polybar/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/popup-calendar.sh --popup &
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
@@ -303,7 +309,7 @@ full-at = 100
 
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
-battery = BAT0
+battery = BAT1
 adapter = ADP1
 
 ; If an inotify event haven't been reported in this many
