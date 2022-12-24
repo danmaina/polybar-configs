@@ -58,13 +58,14 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = fixed:pixelsize=12;1
+font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
+font-2 = siji:pixelsize=12;1
+font-3 = FontAwesome;size=8
 
-modules-left = bspwm i3
+modules-left = i3
 modules-center = 
-modules-right = backlight alsa pulseaudio xkeyboard memory cpu wlan eth battery battery-one temperature powermenu popup-calendar
+modules-right = backlight alsa pulseaudio xkeyboard memory cpu battery temperature popup-calendar
 
 tray-position = right
 tray-padding = 2
@@ -94,12 +95,12 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+format-prefix = "  "
+format-prefix-foreground = #${colors.foreground}
+#format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+#label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -149,7 +150,7 @@ wrapping-scroll = false
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = #34ebab
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
@@ -179,18 +180,20 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
-label = CPU: %percentage:2%%
+format-prefix = "| "
+format-prefix-foreground = ${colors.foreground}
+
+#format-underline = #f90000
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = RAM: %percentage_used%%
+format-prefix = "|  "
+format-prefix-foreground = ${colors.foreground}
+
+#format-underline = #4bffdc
+label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -255,8 +258,8 @@ click-left = ~/.config/polybar/popup-calendar.sh --popup &
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = |   <label-volume> <bar-volume> |
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -339,46 +342,51 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <animation-charging> <label-charging>
+format-charging = | <ramp-capacity> <label-charging> | 
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = | <ramp-capacity> <label-discharging> |
 
 ; Available tags:
 ;   <label-full> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
-format-full = <ramp-capacity> <label-full>
+format-full = | <ramp-capacity> <label-full> |
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw% (unreleased)
 ;   %time%
 ;   %consumption% (shows current charge rate in watts)
-label-charging = BAT0: Charging %percentage%%
+label-charging = Charging %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw% (unreleased)
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = BAT0: Discharging %percentage%%
+label-discharging = Discharging %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw% (unreleased)
-label-full = BAT0: Fully charged
+label-full = Fully charged
 
 ; Only applies if <ramp-capacity> is used
 ramp-capacity-0 = 
+ramp-capacity-0-foreground = #a84632
 ramp-capacity-1 = 
+ramp-capacity-1-foreground = #a85f32
 ramp-capacity-2 = 
+ramp-capacity-2-foreground = #a88732
 ramp-capacity-3 = 
+ramp-capacity-3-foreground = #73a832
 ramp-capacity-4 = 
+ramp-capacity-4-foreground = #46a832
 
 ; Only applies if <bar-capacity> is used
 bar-capacity-width = 10
@@ -501,8 +509,8 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
-format-underline = #f50a4d
+format =  <ramp> <label> |
+#format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
@@ -560,14 +568,14 @@ type = internal/backlight
 
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
-card = intel_backlight
+card = nv_backlight
 
 interval=5
 #exec=light
 
-label = Brightness: %percentage%%
+label =  %percentage%%
 
-format-underline=#00FFFF
+#format-underline=#00FFFF
 
 ; Enable changing the backlight with the scroll wheel (unreleased)
 ; NOTE: This may require additional configuration on some systems. Polybar will
