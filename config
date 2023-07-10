@@ -569,7 +569,8 @@ type = internal/backlight
 
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
-card = nv_backlight
+card = nvidia_0
+#card = nv_backlight
 
 interval=5
 #exec=light
