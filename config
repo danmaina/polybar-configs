@@ -108,6 +108,9 @@ tray-position = none
 background = ${colors.background}
 foreground = #ff4d4d
 
+module-margin-left = 1
+module-margin-right = 1
+
 [bar/lenovo_bar]
 bottom = true
 monitor = DP-0
@@ -128,6 +131,9 @@ tray-position = none
 
 background = ${colors.background}
 foreground = #4dffff
+
+module-margin-left = 1
+module-margin-right = 1
 
 
 [module/xwindow]
