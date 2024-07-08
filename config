@@ -95,7 +95,7 @@ line-size = 3
 line-color = #9c6
 
 modules-left = i3
-modules-right = xkeyboard memory cpu battery temperature
+modules-right = xkeyboard memory cpu battery temperature date
 spacing =1.0
 
 font-0 = fixed:pixelsize=12;1
@@ -119,7 +119,7 @@ line-size = 3
 line-color = #498
 
 modules-left = i3
-modules-right = xkeyboard memory cpu battery temperature
+modules-right = xkeyboard memory cpu battery temperature date
 spacing =1.0
 
 font-0 = fixed:pixelsize=12;1
@@ -286,8 +286,8 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "  %a %Y-%m-%d"
-date-alt = " %Y-%m-%d"
+date = "  %a %d %B %Y"
+date-alt = " %a %d %B %Y"
 
 time = %H:%M:%S
 time-alt = %H:%M:%S
