@@ -127,7 +127,7 @@ font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome;size=8
 
-tray-position = right
+tray-position = none
 tray-padding = 2
 
 background = ${colors.background}
