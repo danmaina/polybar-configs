@@ -67,8 +67,8 @@ modules-left = i3
 modules-center = 
 modules-right = backlight alsa pulseaudio xkeyboard memory cpu battery temperature popup-calendar
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
@@ -103,7 +103,8 @@ font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome;size=8
 
-tray-position = none
+tray-position = right
+tray-padding = 2
 
 background = ${colors.background}
 foreground = #ff4d4d
