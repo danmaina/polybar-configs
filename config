@@ -27,67 +27,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/main_bar]
-monitor = DP-4
-width = 100%
-height = 35
-;offset-x = 1%
-;offset-y = 1%
-radius = 0
-fixed-center = false
-bottom = true
-
-dpi-x=96
-dpi-y=96
-
-tray-scale = 1.0
-tray-maxsize = 20
-
-background = ${colors.background}
-foreground = #ebfc9d
-
-line-size = 3
-line-color = #f00
-
-border-size = 0
-border-color = #00000000
-
-padding-left = 0
-padding-right = 0
-
-module-margin-left = 1
-module-margin-right = 1
-
-font-0 = fixed:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
-font-2 = siji:pixelsize=12;1
-font-3 = FontAwesome;size=8
-
-modules-left = i3
-modules-center = 
-modules-right = backlight alsa pulseaudio xkeyboard memory cpu battery temperature popup-calendar
-
-;tray-position = right
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-override-redirect = false
-enable-ipc = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-[bar/hp_bar]
+[bar/lenovo_bar_0]
 bottom = true
 monitor = DP-0
 
@@ -103,7 +43,7 @@ font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome;size=8
 
-tray-position = right
+tray-position = none
 tray-padding = 2
 
 background = ${colors.background}
@@ -112,7 +52,7 @@ foreground = #ff4d4d
 module-margin-left = 1
 module-margin-right = 1
 
-[bar/lenovo_bar]
+[bar/lenovo_bar_1]
 bottom = true
 monitor = DP-1
 
@@ -128,7 +68,7 @@ font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome;size=8
 
-tray-position = none
+tray-position = right
 tray-padding = 2
 
 background = ${colors.background}
