@@ -28,7 +28,6 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/lenovo_bar_0]
-bottom = true
 monitor = DP-0
 
 line-size = 3
@@ -53,7 +52,6 @@ module-margin-left = 1
 module-margin-right = 1
 
 [bar/lenovo_bar_1]
-bottom = true
 monitor = DP-1
 
 line-size = 3
