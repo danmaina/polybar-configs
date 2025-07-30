@@ -29,7 +29,7 @@ alert = #bd2c40
 
 [bar/lenovo_bar_0]
 monitor = DP-0
-
+bottom=true
 line-size = 3
 line-color = #9c6
 
@@ -53,7 +53,7 @@ module-margin-right = 1
 
 [bar/lenovo_bar_1]
 monitor = DP-1
-
+bottom=true
 line-size = 3
 line-color = #498
 
