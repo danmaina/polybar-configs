@@ -34,16 +34,14 @@ line-size = 3
 line-color = #9c6
 
 modules-left = i3
-modules-right = backlight alsa pulseaudio xkeyboard memory cpu battery temperature date
+modules-center = popup-calendar
+modules-right = backlight pulseaudio xkeyboard memory cpu battery temperature
 spacing =1.0
 
 font-0 = fixed:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome;size=8
-
-tray-position = none
-tray-padding = 2
 
 background = ${colors.background}
 foreground = #ff4d4d
@@ -58,16 +56,14 @@ line-size = 3
 line-color = #498
 
 modules-left = i3
-modules-right = backlight alsa pulseaudio xkeyboard memory cpu battery temperature popup-calendar
+modules-center = popup-calendar tray
+modules-right = backlight pulseaudio xkeyboard memory cpu battery temperature
 spacing =1.0
 
 font-0 = fixed:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome;size=8
-
-tray-position = right
-tray-padding = 2
 
 background = ${colors.background}
 foreground = #4dffff
@@ -79,6 +75,11 @@ enable-ipc = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+
+[module/tray]
+type=internal/tray
+tray-padding=2
 
 
 [module/xwindow]
@@ -503,7 +504,7 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format =  <ramp> <label> |
+format =  <ramp> <label> 
 #format-underline = #f50a4d
 format-warn =  <ramp> <label-warn>
 format-warn-foreground = ${colors.secondary}
