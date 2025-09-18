@@ -33,8 +33,8 @@ bottom=true
 line-size = 3
 line-color = #9c6
 
-modules-left = i3
-modules-center = popup-calendar
+modules-left = popup-calendar
+modules-center = i3
 modules-right = backlight pulseaudio xkeyboard memory cpu battery temperature
 spacing = 1.5
 
@@ -55,8 +55,8 @@ bottom=true
 line-size = 3
 line-color = #498
 
-modules-left = i3
-modules-center = popup-calendar tray
+modules-left = tray
+modules-center = i3
 modules-right = backlight pulseaudio xkeyboard memory cpu battery temperature
 spacing = 1.5
 
